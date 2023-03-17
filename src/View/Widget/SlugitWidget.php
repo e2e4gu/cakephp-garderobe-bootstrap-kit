@@ -18,7 +18,7 @@ class SlugitWidget extends BasicWidget{
       $this->_View = $view;
     }
 
-    public function render(array $data, ContextInterface $context)
+    public function render(array $data, ContextInterface $context): string
     {
       $this->_View->Html->script('Garderobe/BootstrapKit.slugit/jquery.slugit.js',['block' => true]);
       if(!isset($data['id'])){

@@ -20,7 +20,7 @@ use Garderobe\BootstrapKit\View\Widget\FileUploadWidget;
 
 class CoreEvent implements EventListenerInterface {
 
-    public function implementedEvents()
+    public function implementedEvents(): array
     {
         return array(
 	        'View.beforeRender' => array(
@@ -32,13 +32,13 @@ class CoreEvent implements EventListenerInterface {
     public function addWidgets(Event $event, $viewFile)
     {
         $view = $event->getSubject();
-        $widgetRegistry = $view->Form->widgetRegistry();
+        $widgetRegistry = $view->Form->getWidgetLocator();
 
         //TODO: possible implement to load widget at once
         // Switcher loading section
         $switcher = new SwitcherWidget(
             $view->Form->templater(),
-            $view->Form->widgetRegistry()->get('_default'),
+            $view->Form->getWidgetLocator()->get('_default'),
             $view
         );
         $view->Form->addWidget('switcher', $switcher);

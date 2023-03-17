@@ -15,7 +15,8 @@ class FileUploadWidget extends FileWidget{
         parent:: __construct($templates);
     }
 
-    public function render(array $data, ContextInterface $context){
+    public function render(array $data, ContextInterface $context): string
+    {
         $this->_View->Html->css('Garderobe/BootstrapKit.fileuploadplus/style.css', ['block' => true]);
         $this->_View->Html->css('Garderobe/BootstrapKit.fileuploadplus/jquery.fileupload.css', ['block' => true]);
         $this->_View->Html->script('Garderobe/BootstrapKit.fileuploadplus/vendor/jquery.ui.widget.js', ['block' => true]);

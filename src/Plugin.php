@@ -8,7 +8,7 @@ use Cake\Event\EventManager;
 class Plugin extends BasePlugin
 {
 
-    public function bootstrap(PluginApplicationInterface $app)
+    public function bootstrap(PluginApplicationInterface $app): void
     {
         parent::bootstrap($app);
 

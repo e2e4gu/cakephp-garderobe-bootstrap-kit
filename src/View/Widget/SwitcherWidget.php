@@ -32,7 +32,7 @@ class SwitcherWidget extends CheckboxWidget
     }
 
 
-    public function render(array $data, ContextInterface $context)
+    public function render(array $data, ContextInterface $context): string
     {
         $this->_View->Html->css('Garderobe/BootstrapKit.switch/bootstrap-switch.min.css', ['block' => true]);
         $this->_View->Html->script('Garderobe/BootstrapKit.switch/bootstrap-switch.min.js', ['block' => true]);

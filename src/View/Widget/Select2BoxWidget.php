@@ -22,7 +22,7 @@ class Select2BoxWidget extends SelectBoxWidget
         parent::__construct($templates);
     }
 
-    public function render(array $data, ContextInterface $context)
+    public function render(array $data, ContextInterface $context): string
     {
         $this->_View->Html->css(
             ['Garderobe/BootstrapKit.select2/select2.min.css', 'Garderobe/BootstrapKit.select2/select2-bootstrap.css'],
